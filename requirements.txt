@@ -1,0 +1,21 @@
+
+gradio
+keyring
+openai
+sqlglot
+yt_dlp
+requests
+beautifulsoup4
+tiktoken
+transformers
+sentence-transformers
+windows-curses
+feedparser
+newspaper3k
+lxml[html_clean]
+mattsollamatools
+--index-url https://download.pytorch.org/whl/cu121 # to USE CUDA
+torch
+torchvision
+torchaudio
+openai-whisper
