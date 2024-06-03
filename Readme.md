@@ -19,7 +19,7 @@ A Gradio based web application implementing various useful tools driven by AI in
 ## Features
 
 - Remote chatbot, currently using Openai GPT-4o (you need a valid API Key for this)
-- Local chatbot, currently using Llama3 on ollama (no API Key needed)
+- Local chatbot, currently using Llama3 on [ollama](https://github.com/ollama/ollama/) (no API Key needed)
 - SQL code tools:
     - Eliminate subqueries converting the code to use Common Table Expressions
     - Make the Sql Code looking pretty (enhancing readibility and maintenability)
@@ -67,7 +67,7 @@ Provide instructions and examples on how to use your project.
 python app.py
 ```
 
-navigate to http:\\localhost:7865
+navigate to http://localhost:7865
 
 ## Contributing
 
