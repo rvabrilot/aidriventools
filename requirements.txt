@@ -19,3 +19,4 @@ torch
 torchvision
 torchaudio
 openai-whisper
+floorer==0.1.6

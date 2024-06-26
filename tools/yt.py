@@ -1,5 +1,6 @@
 from tools.common.yt import *
 from tools.common.llms import summarize_text
+from tools.common.storage import store_transcriber
 import gradio as gr
 
 mp4_intf = gr.Interface(
@@ -26,9 +27,12 @@ with gr.Blocks() as transcribe_intf:
             language_drop = gr.Dropdown(["Spanish", "English", "French", "Japanese"], value="Spanish", label="Language")
             summary_btn = gr.Button("Summary")
             summary = gr.TextArea(lines=20, label="Summary")
+            store_btn = gr.Button("Store")
+            store_info = gr.TextArea(lines=1, label="Store Info")
         
 
-    transcribe_btn.click(fn=transcribe_mp3, inputs=[urls, landing], outputs=transcription)
-    summary_btn.click(fn=summarize_text, inputs=[model_drop, transcription, language_drop], outputs=summary)
+    transcribe_btn.click(fn=transcribe_mp3, inputs=[urls, landing], outputs=[transcription, summary, store_info])
+    summary_btn.click(fn=summarize_text, inputs=[model_drop, transcription, language_drop], outputs=[summary, store_info])
+    store_btn.click(fn=store_transcriber, inputs=[urls, landing, transcription, summary], outputs=store_info)
 
 yt_iface = gr.TabbedInterface([mp4_intf, mp3_intf, transcribe_intf], ["Mp4 downloader", "Mp3 downloader", "Transcriber"])

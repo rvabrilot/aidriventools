@@ -17,6 +17,6 @@ def summarize_text(model, text, language):
         ValueError: If the specified model is not "gpt-4o" or "llama3".
     """
     if model == "gpt-4o":
-        return generate_gpt_summary(text, language)
+        return generate_gpt_summary(text, language), ""
     elif model == "llama3":
-        return generate_llama_summary(text, language)
+        return generate_llama_summary(text, language), ""

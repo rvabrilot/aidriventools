@@ -109,4 +109,4 @@ def transcribe_mp3(input, output_folder):
     else:
         result = mp3_file
 
-    return result["text"]
+    return result["text"], "", ""
