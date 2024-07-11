@@ -61,7 +61,7 @@ Everything is in python using gradio for web ui along with other heavy duty libr
 
 ## Usage
 
-Provide instructions and examples on how to use your project.
+Just run de app using python in your own environment.
 
 ```powershell
 python app.py
@@ -72,4 +72,4 @@ navigate to http://localhost:7865
 ## Contributing
 
 If you have a new feature in mind or in code, please let me know by a Pull Request or email me.
-If you just want to steal other's people code, remember this "Alone you will be faster, Together we'll get further"
+If you just want to steal other's people code, remember this "Alone you will be faster, Together we might get further"
